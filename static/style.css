@@ -116,13 +116,23 @@ body{
 
 .code{
     padding: 16px;
-    background-color: #3C3D37;
+    background-color: #171817;
     color: #ECDFCC;
     font-family: monospace;
     margin: 8px;
     border-radius: 8px;
     white-space: nowrap;
     overflow-x: scroll;
+    max-width: 800px;
+}
+
+.para .code{
+        padding: 8px;
+        background-color: #171817;
+        color: #ECDFCC;
+        font-family: monospace;
+        border-radius: 4px;
+        font-size: 0.8em;
 }
 
 .sec .image{
@@ -131,4 +141,43 @@ body{
     border-radius: 16px;
     margin: 30px 0;
     background-size: cover;
+}
+
+.page{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.page .btn{
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #3C3D37;
+    /* box-shadow: #171817 4px 4px 4px; */
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.page .btn:hover{
+    background-color: #171817;
+}
+
+.page a{
+    text-decoration: none;
+    color: #ECDFCC;
+}
+
+
+/* ----colors------*/
+
+.purple{
+    color: rgb(177, 56, 177);
+}
+
+.blue{
+    color: rgb(84, 182, 221);
+}
+
+.green{
+    color: rgb(114, 224, 95);
 }
