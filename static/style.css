@@ -1,0 +1,134 @@
+/*
+Color Palette
+
+Light: #697565    Mid: #3C3D37    Dark: #1E201E    Text: #ECDFCC
+
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+
+.namebar{
+    width: 100vw;
+    height: 8vh;
+    background-color: #1E201E;
+    box-shadow: 0px 4px 4px #00000079;
+    color: #ECDFCC;
+    font-size: 1.5rem;
+    position: absolute;
+    margin-top: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.headless{
+    position: absolute;
+    margin-top: 8vh;
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    justify-content: baseline;
+    font-size: 0.9rem;
+}
+
+.nav{
+    height: 92vh;
+    width: 20vw;
+    background-color: #3C3D37;
+    box-shadow: 4px 0px 8px;
+    z-index: 9;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.nav li{
+    height: auto;
+    width: auto;
+    padding: 8px;
+    background-color: #1E201E;
+    color: #ECDFCC;
+    word-wrap: normal;
+    margin: 4px 0;
+    margin-left: 0;
+    transition: 0.3s;
+    font-size: 1.2em;
+}
+
+.nav a{
+    text-decoration: none;
+}
+
+.nav li:hover{
+    background-color: #171817;
+}
+
+.main{
+    height: 92vh;
+    width: 80vw;
+    background-color: #1E201E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    overflow-y: scroll;
+}
+
+.sec h1{
+    font-size: 1.5rem;
+    color: #ECDFCC;
+    margin: 15px 15px;
+}
+
+.sec{
+    border-radius: 10px;
+    margin: 10px;
+    padding-top: 1px;
+    padding: 3%;
+    max-width: 800px;
+}
+
+.para{
+    padding: 8px;
+    margin: 0 8px;
+    color: #ECDFCC;
+    font-size: 1.2em;
+    margin: 16px 0;
+}
+
+.bangla{
+    font-family: 'kalpurush';
+}
+
+.code{
+    padding: 16px;
+    background-color: #3C3D37;
+    color: #ECDFCC;
+    font-family: monospace;
+    margin: 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.sec .image{
+    height: 270px;
+    width: 480px;
+    border-radius: 16px;
+    margin: 30px 0;
+    background-size: cover;
+}
