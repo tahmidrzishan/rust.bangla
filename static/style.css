@@ -5,6 +5,10 @@ Light: #697565    Mid: #3C3D37    Dark: #1E201E    Text: #ECDFCC
 
 */
 
+@font-face {
+    font-family: 'Kalpurush';
+    src: url('kalpurush.ttf');
+}
 
 *{
     margin: 0;
@@ -111,7 +115,7 @@ body{
 }
 
 .bangla{
-    font-family: 'kalpurush';
+    font-family: 'Kalpurush';
 }
 
 .code{
@@ -127,12 +131,12 @@ body{
 }
 
 .para .code{
-        padding: 4px;
-        background-color: #171817;
-        color: #ECDFCC;
-        font-family: monospace;
-        border-radius: 2px;
-        font-size: 0.8em;
+    padding: 4px;
+    background-color: #171817;
+    color: #ECDFCC;
+    font-family: monospace;
+    border-radius: 2px;
+    font-size: 0.8em;
 }
 
 .sec .image{
