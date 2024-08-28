@@ -1,0 +1,4 @@
+images:::
+
+<div class="image" style="background-image: url('./images/installRust.png');"></div>
+
