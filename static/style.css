@@ -7,7 +7,7 @@ Light: #697565    Mid: #3C3D37    Dark: #1E201E    Text: #ECDFCC
 
 :root{
     --rust: rgb(227, 57, 0);
-    --dark: #292f36ff;
+    --dark: rgb(23, 29, 35);
     --white: #ECDFCC;
     --light: rgb(234, 93, 0);
     --black: rgb(11, 14, 14);
