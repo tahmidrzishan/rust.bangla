@@ -196,5 +196,21 @@ body{
 }
 
 .green{
-    color: rgb(114, 224, 95);
+    color: rgb(60, 202, 95);
+}
+
+.yellow{
+    color: #ffe600;
+}
+
+.orange{
+    color: #ff764c;
+}
+
+.lime{
+    color: rgb(179, 255, 92);
+}
+
+.current{
+    background-color: rgb(234, 93, 0);
 }
