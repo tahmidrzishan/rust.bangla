@@ -49,6 +49,94 @@
                         <span class="green">Running</span> `target/debug/hello` <br>
                         amar boyosh 123 bochor <br>
                     </div>
+                    <div class="para"><span class="bangla">ভেজালটা হবে তখন, যখন আমরা কোন ভ্যারিয়েবলের মান পরিবর্তন করতে যাবো। এবার এই কোডটা রান করে দেখেন। </span></div>
+
+                    <div class="code">
+                        <span class="green">fn</span> <span class="yellow">main</span>() {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">let</span> age<span class="orange">:</span> <span class="lime">i8</span> = <span class="lime">123</span><span class="orange">;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"amar boyosh {} bochor",</span> age)<span class="orange">;</span><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;age = <span class="lime">123</span><span class="orange">;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"amar boyosh ekhon {} bochor",</span> age)<span class="orange">;</span><br>
+                        }                        
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">
+                            এইরকম বিদঘুটে একটা এরর আসছে, তাই না?
+                        </span>
+                    </div>
+
+                    <div class="code">
+                        $ cargo run <br>
+                        <span class="green">Compiling</span> hello v0.1.0 (/home/zishan/Desktop/hello) <br>
+                        <span class="scaryRed">error[E0384]</span>: cannot assign twice to immutable variable `age` <br>
+                        &nbsp;<span class="green">--></span> src/main.rs:4:5 <br>
+                        &nbsp;&nbsp;&nbsp;<span class="green">|</span> <br>
+                        <span class="green">2</span>&nbsp;&nbsp;<span class="green">|</span>&nbsp;&nbsp;&nbsp;&nbsp;let age: i8 = 123; <br>
+                        &nbsp;&nbsp;&nbsp;<span class="green">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---  </span><br>
+                        &nbsp;&nbsp;&nbsp;<span class="green">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  <br>
+                        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first assignment to `age`  <br>
+                        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help: consider making this binding mutable: `mut age` </span><br>
+                        <span class="green">3&nbsp;&nbsp;|</span>&nbsp;&nbsp;&nbsp;&nbsp;println!("amar boyosh {} bochor", age);  <br>
+                        <span class="green">4&nbsp;&nbsp;|</span>&nbsp;&nbsp;&nbsp;&nbsp;age = 123; <br>
+                        &nbsp;&nbsp;&nbsp;<span class="green">|</span><span class="scaryRed">&nbsp;&nbsp;&nbsp;&nbsp;^^^^^^^^^ cannot assign twice to immutable variable </span><br>
+                        <br>
+                        <b>For more information about this error, try `rustc --explain E0384`.</b> <br>
+                        <span class="scaryRed">error</span>: could not compile `hello` (bin "hello") due to 1 previous error <br>
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">আসলে বিদঘুটে না। এই এরর টা আসছে আপনাকে হেল্প করার জন্য। রাস্ট এর ভ্যারিয়েবলগুলো যেহেতু বাই ডিফল্ট </span>immutable, <span class="bangla">মানে, মান পরিবর্তন করা যায় না, তাই রাস্ট আপনাকে এই এররটা দিচ্ছে। এররটাতে দেখেন রাস্ট আপনাকে বলে দিচ্ছে কী সমসস্যা হয়েছে, আর সেটা কিভাবে ঠিক করতে হবে। এররটা হলো,</span>
+                    </div>
+                    <div class="code">
+                        <span class="scaryRed">error[E0384]</span>: cannot assign twice to immutable variable `age` 
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">রাস্ট এখানে আপনাকে বলছে যে, আপনি একটা </span>imuutable variable <span class="bangla">এ একাধিকবার মান বসাতে পারবেন না। এরপরে রাস্ট আপনাকে হেল্পও করতে চাইছে।</span>
+                    </div>
+
+                    <div class="code">
+                        <span class="green">help: consider making this binding mutable: `mut age`</span>
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">এখন, এটা কিভাবে করবেন? আসলে অনেক সহজ। জাস্ট ভারিয়েবলের নামের আগে </span><span class="code"><span class="green">mut</span></span> keyword <span class="bangla">টা দিয়ে দিতে হবে। তাহলেই আপনার ভ্যারিয়েবলটার আপনি যতবার ইচ্ছা মান চেঞ্জ করতে পারবেন।</span>
+                    </div>
+                    <div class="code">
+                        <span class="green">let mut</span> age<span class="orange">:</span> <span class="lime">i8</span> = <span class="lime">123</span><span class="orange">;</span>
+                    </div>
+                    <div class="para">
+                        <span class="bangla">এইভাবে। এবার নিচের মত কোডটা লিখে রান করে দেখেন।</span>
+                    </div>
+                    
+                    <div class="code">
+                        <span class="green">fn</span> <span class="yellow">main</span>() {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="green">let mut</span> age<span class="orange">:</span> <span class="lime">i8</span> = <span class="lime">123</span><span class="orange">;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"amar boyosh {} bochor",</span> age)<span class="orange">;</span><br>
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;age = <span class="lime">123</span><span class="orange">;</span><br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"amar boyosh ekhon {} bochor",</span> age)<span class="orange">;</span><br>
+                        }                        
+                    </div>
+
+                    <div class="code">
+                        $ cargo run <br>
+                        <span class="green">Compiling</span> hello v0.1.0 (/home/zishan/Desktop/hello) <br>
+                        <span class="green">Finished</span> `dev` profile [unoptimized + debuginfo] target(s) in 0.31s <br>
+                        <span class="green">Running</span> `target/debug/hello` <br>
+                        amar boyosh 123 bochor <br>
+                        amar boyosh ekhon 123 bochor 
+                    </div>
+
+                    <div class="para"><span class="bangla">এইবার সব ঠিক আছে। কারণ আমরা ভ্যারিয়েবলটাকে </span> mutable <span class="bangla">করে নিয়েছি।</span></div>
+
+                    <h1><span class="bangla">উপসংহার</span></h1>
+
+                    <div class="para">
+                        <span class="bangla">রাস্টের সব ভ্যারিয়েবলই </span>immutable. <span class="bangla">অর্থাৎ মান পরিবর্তন করা যায় না। মান পরিবর্তন করা যায় এমন ভ্যারিয়েবল চাইলে </span><span class="code"><span class="green">&nbsp;mut</span></span> keyword <span class="bangla">টা ইউজ করতে হয়।</span>
+                    </div>
                 </section>
                 <div class="page">
                     <a href="printvar.html"><div class="btn"><div class="bangla">আগের লেসন</div></div></a>

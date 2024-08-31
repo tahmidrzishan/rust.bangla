@@ -214,3 +214,7 @@ body{
 .current{
     background-color: rgb(234, 93, 0);
 }
+
+.scaryRed{
+    color: #b60000;
+}

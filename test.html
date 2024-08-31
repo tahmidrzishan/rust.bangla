@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="code">
+    $ cargo run <br>
+    <span class="green">Compiling</span> hello v0.1.0 (/home/zishan/Desktop/hello) <br>
+    <span class="scaryRed">error[E0384]</span>: cannot assign twice to immutable variable `age` <br>
+    &nbsp;<span class="green">--></span> src/main.rs:4:5 <br>
+    &nbsp;&nbsp;&nbsp;<span class="green">|</span> <br>
+    <span class="green">2</span>&nbsp;&nbsp;<span class="green">|</span>&nbsp;&nbsp;&nbsp;&nbsp;let age: i8 = 123; <br>
+    &nbsp;&nbsp;&nbsp;<span class="green">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---  </span><br>
+    &nbsp;&nbsp;&nbsp;<span class="green">|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|  <br>
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first assignment to `age`  <br>
+    &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;help: consider making this binding mutable: `mut age` </span><br>
+    <span class="green">3&nbsp;&nbsp;|</span>&nbsp;&nbsp;&nbsp;&nbsp;println!("amar boyosh {} bochor", age);  <br>
+    <span class="green">4&nbsp;&nbsp;|</span>&nbsp;&nbsp;&nbsp;&nbsp;age = 123; <br>
+    &nbsp;&nbsp;&nbsp;<span class="green">|</span><span class="scaryRed">&nbsp;&nbsp;&nbsp;&nbsp;^^^^^^^^^ cannot assign twice to immutable variable </span><br>
+    <br>
+    <b>For more information about this error, try `rustc --explain E0384`.</b> <br>
+    <span class="scaryRed">error</span>: could not compile `hello` (bin "hello") due to 1 previous error <br>
+</div>
+</body>
+</html>
