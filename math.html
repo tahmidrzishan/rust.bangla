@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./static/style.css" />
+        <title>রাস্ট টিউটোরিয়াল | শুরু</title>
+    </head>
+
+    <body>
+        <div class="namebar"><div class="bangla">রাস্ট টিউটোরিয়াল | গাণিতিক অপারেশন</div></div>
+        <div class="headless">
+            <div class="nav">
+                <ul>
+                    <a href="#"><li style="margin-top: 0;"><div class="bangla">শুরু</div></li></a>
+                    <a href="hello.html"><li><div class="bangla">হ্যালো ওয়ার্ল্ড</div></li></a>
+                    <a href="cargo.html"><li><div class="bangla">কার্গো</div></li></a>
+                    <a href="varanddat.html"><li><div class="bangla">ভ্যারিয়েবল ও ডাটা টাইপ</div></li></a>
+                    <a href="printvar.html"><li><div class="bangla">ভ্যারিয়েবল প্রিন্ট</div></li></a>
+                    <a href="mutability.html"><li><div class="bangla"> ভ্যারিয়েবলের মান পরিবর্তন</div></li></a>
+                    <a href="#"><li style="background-color: rgb(234, 93, 0);"><div class="bangla">গাণিতিক অপারেশন</div></li></a>
+                    <a href="#"><li><div class="bangla">কনস্ট্যান্ট</div></li></a>
+                    <a href="#"><li><div class="bangla">কন্ডিশনালস</div></li></a>
+                    <a href="#"><li><div class="bangla">লুপ</div></li></a>
+                    <a href="#"><li><div class="bangla">ফর লুপ</div></li></a>
+                    <a href="#"><li><div class="bangla">হোয়াইল লুপ</div></li></a>
+                    <a href="#"><li><div class="bangla">টাপল</div></li></a>
+                    <a href="#"><li><div class="bangla">ফাংশন</div></li></a>
+                </ul>
+            </div>
+            <div class="main">
+                <section class="sec" id="sect">
+                    <h1><span class="bangla">গাণিতিক অপারেশন</span></h1>
+                    <div class="para">
+                        <span class="bangla">রাস্টে বেসিক পাঁচটা গাণিতিক অপারেশন করা যায়। যোগ, বিয়োগ, গুণ, ভাগ, আর ভাগশেষ নির্ণয়। নিচে ডিক্লেয়ার করা দুইটা ভ্যারিয়েবলের মধ্যে আমরা গাণিতিক অপারেশনগুলো করে দেখবো।</span>
+                    </div>
+                    <div class="code">
+                        <span class="green">let</span> num1<span class="orange">:</span> <span class="lime">i8</span> = <span class="lime">15</span><span class="orange">;</span><br>
+                        <span class="green">let</span> num2<span class="orange">:</span> <span class="lime">i8</span> = <span class="lime">4</span><span class="orange">;</span>
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">এবার আমরা এই ভ্যারিয়েবলগুলোর যোগফল, বিয়োগফল, গুণফল, ভাগফল, আর ভাগশেষ প্রিন্ট করতে পারি।</span>
+                    </div>
+                    <div class="code">
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"num1 + num2 = {}",</span> num1 <span class="orange">+ </span>num2)<span class="orange">;</span><br>
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"num1 - num2 = {}",</span> num1 <span class="orange">- </span>num2)<span class="orange">;</span><br>
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"num1 * num2 = {}",</span> num1 <span class="orange">* </span>num2)<span class="orange">;</span><br>
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"num1 / num2 = {}",</span> num1 <span class="orange">/ </span>num2)<span class="orange">;</span><br>
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"remainder = {}",</span> num1 <span class="orange">% </span>num2)<span class="orange">;</span>
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">এটা রান করলে রেজাল্টটা হবে কিছুটা এইরকমঃ</span>
+                    </div>
+
+                    <div class="code">
+                        $ cargo run <br>
+                        <span class="green">Compiling</span> hello v0.1.0 (/home/zishan/Desktop/hello) <br>
+                        <span class="green">Finished</span> `dev` profile [unoptimized + debuginfo] target(s) in 0.31s <br>
+                        <span class="green">Running</span> `target/debug/hello` <br>
+                        num1 + num2 = 19 <br>
+                        num1 - num2 = 11 <br>
+                        num1 * num2 = 60 <br>
+                        num1 / num2 = 3 <br>
+                        remainder = 3 
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">আমরা চাইলে এই রেজাল্টগুলোকে কোন ভ্যারিয়েবলেও সেভ করে রাখতে পারি।</span>
+                    </div>
+
+                    <div class="code">
+                        <span class="green">let</span> add <span class="orange">=</span> num1 <span class="orange">+</span> num2<span class="orange">;</span> <br>
+                        <span class="green">let</span> sub <span class="orange">=</span> num1 <span class="orange">-</span> num2<span class="orange">;</span> <br>
+                        <span class="green">let</span> multi <span class="orange">=</span> num1 <span class="orange">*</span> num2<span class="orange">;</span> <br>
+                        <span class="green">let</span> dev <span class="orange">=</span> num1 <span class="orange">/</span> num2<span class="orange">;</span> <br>
+                        <span class="green">let</span> rem <span class="orange">=</span> num1 <span class="orange">%</span> num2<span class="orange">;</span>
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">এরপরে জাস্ট এগুলো প্রিন্ট করে দিবো।</span>
+                    </div>
+
+                    <div class="code">
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"{}",</span> add)<span class="orange">;</span><br>
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"{}",</span> sub)<span class="orange">;</span><br>
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"{}",</span> multi)<span class="orange">;</span><br>
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"{}",</span> dev)<span class="orange">;</span><br>
+                        <span class="yellow">println</span><span class="orange">!</span>(<span class="orange">"{}",</span> rem)<span class="orange">;</span><br>
+                    </div>
+
+                    <div class="para">
+                        <span class="bangla">এবার </span><span class="code">cargo run</span> <span class="bangla">করলে আপনি নিচের মত রেজাল্ট দেখতে পারবেন ইনশাআল্লাহ।</span>
+                    </div>
+
+                    <div class="code">
+                        $ cargo run <br>
+                        <span class="green">Compiling</span> hello v0.1.0 (/home/zishan/Desktop/hello) <br>
+                        <span class="green">Finished</span> `dev` profile [unoptimized + debuginfo] target(s) in 0.34s <br>
+                        <span class="green">Running</span> `target/debug/hello` <br>
+                        19 <br>
+                        11 <br>
+                        60 <br>
+                        3 <br>
+                        3
+                    </div>
+
+                    <br> 
+
+                    <h1><span class="bangla">উপসংহার</span></h1>
+                    <div class="para">
+                        <span class="bangla">আমরা শিখলাম কিভাবে রাস্টে যোগ, বিয়োগ, গুণ, ভাগ ও ভাগশেষ নির্ণয় করা যায়। আমরা চাইলে এগুলো কোন ভ্যারিয়েবলে সেভ করে রাখতে পারি। অথবা সরাসরি প্রিন্টও করতে পারি <span>
+                    </div>
+                </section>
+                <div class="page">
+                    <a href="#"><div class="btn"><div class="bangla">... ...</div></div></a>
+                    <a href="hello.html"><div class="btn"><div class="bangla">পরের লেসন</div></div></a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
