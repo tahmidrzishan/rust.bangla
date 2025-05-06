@@ -1,6 +1,6 @@
 # Rust Bangla Tutorial
 
-## This is a website for Rust Totorial in Bangla
+## This is a website for Rust Tutorial in Bangla
 
 So, it's basically for self-learning the Rust programming language. If you're a native Bengali (Bangla) speaker, this will be very helpful for you inshaallah.
 
